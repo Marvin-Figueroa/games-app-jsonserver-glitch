@@ -1,0 +1,16 @@
+.App {
+  width: 90%;
+  max-width: 130rem;
+  margin: 0 auto;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
