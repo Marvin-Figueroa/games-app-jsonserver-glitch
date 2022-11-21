@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  align-self: flex-start;
 }
 
 .main-nav__logo {
@@ -32,20 +33,19 @@
   gap: 1rem;
 }
 
-.main-nav__item {
-}
-
 .main-nav__link {
-  &:link,
-  &:visited {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-  }
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: white;
 
   &:hover,
   &:active {
     color: $accent-color;
+    cursor: pointer;
   }
 
   &.current {

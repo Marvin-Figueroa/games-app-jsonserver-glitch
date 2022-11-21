@@ -12,30 +12,28 @@ const Navbar = (props) => {
       </div>
       <ul className="main-nav__list">
         <li className="main-nav__item">
-          <a
+          <button
             onClick={() => props.handleClick("games")}
             className={
               props.currentPage === "games"
                 ? "main-nav__link current"
                 : "main-nav__link"
             }
-            href="#"
           >
             Games
-          </a>
+          </button>
         </li>
         <li className="main-nav__item">
-          <a
+          <button
             onClick={() => props.handleClick("about")}
             className={
               props.currentPage === "about"
                 ? "main-nav__link current"
                 : "main-nav__link"
             }
-            href="#"
           >
             About
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
