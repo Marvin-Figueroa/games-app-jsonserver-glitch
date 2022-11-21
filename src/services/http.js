@@ -18,15 +18,16 @@ export default class HttpClient {
       throw new Error(res.statusText);
     }
 
-    if (res.status !== 204) {
+    if (options.parseResponse && res.status !== 204) {
       return res.json();
     }
 
-    return undefined;
+    return res;
   }
 
   get(endpoint, options = {}) {
     return this.#fetchJSON(endpoint, {
+      parseResponse: true,
       ...options,
       method: "GET",
     });
