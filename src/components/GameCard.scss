@@ -2,14 +2,12 @@
 
 .game-card {
   border-radius: 10px;
+  border: 2px solid $accent-color;
   overflow: hidden;
   display: flex;
-  // gap: 1rem;
   flex-direction: column;
-  min-width: 25rem;
-  background-color: darken(white, 0.4);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  background-color: white;
+  max-height: 20rem;
 }
 
 .game-card__image-container {
@@ -20,36 +18,39 @@
 .game-card__image {
   display: block;
   width: 100%;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  height: 100%;
+  object-fit: cover;
 }
 
 .game-card__text {
+  height: 8rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 
 .game-card__title {
-  font-weight: bold;
-  font-size: 2rem;
-  // margin: 1rem 0;
-
-  a {
-    text-decoration: none;
-
-    &:link,
-    &:visited {
-      color: $primary-color;
-    }
+  button {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    border: none;
+    font-family: inherit;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 100%;
+    overflow: hidden;
+    outline: none;
+    white-space: nowrap;
 
     &:active,
     &:hover {
       color: $secondary-color;
+      cursor: pointer;
     }
   }
 }
@@ -58,4 +59,8 @@
   font-weight: bold;
   font-size: 20px;
   color: $accent-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
 }
