@@ -54,7 +54,7 @@ function App() {
     setCurrentPage("game");
   }
 
-  async function handlePageChange(page) {
+  function handlePageChange(page) {
     setCurrGamesPage(page);
   }
 
@@ -84,6 +84,7 @@ function App() {
             <Pagination
               itemsCount={gamesCount}
               pageSize={8}
+              selectedPage={currGamesPage}
               onPageChange={handlePageChange}
             />
           )}
