@@ -33,7 +33,7 @@ function App() {
 
   async function getGames() {
     setLoading(true);
-    const res = await http.get("/games?_page=1&_limit=2", {
+    const res = await http.get("/games?_page=1&_limit=8", {
       parseResponse: false,
     });
 
