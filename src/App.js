@@ -4,14 +4,14 @@ import HttpClient from "./services/http";
 
 import "./App.scss";
 
-import GameCardsGrid from "./components/GameCardsGrid";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Pagination from "./components/Pagination";
+import GameCardsGrid from "./components/GameCardsGrid/GameCardsGrid";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
+import GameDetails from "./components/GameDetails/GameDetails";
+import Pagination from "./components/Pagination/Pagination";
 
 import HashLoader from "react-spinners/HashLoader";
-import GameDetails from "./components/GameDetails";
 
 const http = new HttpClient("https://plume-gelatinous-asp.glitch.me");
 

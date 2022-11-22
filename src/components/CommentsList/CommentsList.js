@@ -1,4 +1,4 @@
-import Comment from "./Comment";
+import Comment from "../Comment/Comment";
 import "./CommentsList.scss";
 
 const CommentsList = ({ comments, users }) => {

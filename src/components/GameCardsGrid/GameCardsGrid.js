@@ -1,4 +1,4 @@
-import GameCard from "./GameCard";
+import GameCard from "../GameCard/GameCard";
 import "./GameCardsGrid.scss";
 
 const GameCardsGrid = ({ games, handleGameSelect }) => {

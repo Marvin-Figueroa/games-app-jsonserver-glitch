@@ -1,8 +1,9 @@
 import "./GameDetails.scss";
-
 import { useEffect, useState } from "react";
-import CommentsList from "./CommentsList";
-import HttpClient from "../services/http";
+
+import CommentsList from "../CommentsList/CommentsList";
+import HttpClient from "../../services/http";
+
 const http = new HttpClient("https://plume-gelatinous-asp.glitch.me");
 
 const GameDetails = ({ game }) => {
