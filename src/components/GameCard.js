@@ -1,4 +1,5 @@
 import "./GameCard.scss";
+import { AiFillStar } from "react-icons/ai";
 
 const GameCard = ({ id, name, rating, image, handleGameSelect }) => {
   return (
@@ -8,11 +9,12 @@ const GameCard = ({ id, name, rating, image, handleGameSelect }) => {
       </div>
       <div className="game-card__text">
         <h2 className="game-card__title">
-          <a onClick={() => handleGameSelect(id)} href="#">
-            {name}
-          </a>
+          <button onClick={() => handleGameSelect(id)}>{name}</button>
         </h2>
-        <p className="game-card__rating">{rating} / 5.0</p>
+        <p className="game-card__rating">
+          <AiFillStar />
+          {rating} / 5.0
+        </p>
       </div>
     </article>
   );
