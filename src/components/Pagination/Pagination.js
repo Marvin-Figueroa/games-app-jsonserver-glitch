@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Pagination.scss";
 
-const Pagination = ({ itemsCount, pageSize, onPageChange }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Pagination = ({ itemsCount, pageSize, onPageChange, selectedPage }) => {
+  const [currentPage, setCurrentPage] = useState(selectedPage);
 
   useEffect(() => {
     onPageChange(currentPage);
-    console.log("useEffect in Pagination.js was called");
   }, [currentPage]);
 
   const pagesCount = Math.ceil(itemsCount / pageSize);
